@@ -8,7 +8,7 @@ import org.junit.rules.ExpectedException;
  
 import static joptsimple.util.RegexMatcher.*;
 import static org.junit.Assert.*;
-import org.junit.rules.ExpectedException.*;
+//import org.junit.rules.ExpectedException.*;
  
 /**
  * @author <a href="mailto:pholser@alumni.rice.edu">Paul Holser</a>
