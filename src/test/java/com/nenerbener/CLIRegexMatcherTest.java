@@ -1,4 +1,4 @@
-package joptsimple.util;
+package com.nenerbener;
  
 import joptsimple.ValueConversionException;
 import org.junit.Before;
@@ -6,14 +6,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
  
-import static joptsimple.util.RegexMatcher.*;
+import joptsimple.util.RegexMatcher;
 import static org.junit.Assert.*;
 //import org.junit.rules.ExpectedException.*;
  
 /**
  * @author <a href="mailto:pholser@alumni.rice.edu">Paul Holser</a>
  */
-public class RegexMatcherTest {
+public class CLIRegexMatcherTest {
     @Rule public final ExpectedException thrown = ExpectedException.none();
  
     private RegexMatcher abc;
@@ -44,7 +44,7 @@ public class RegexMatcherTest {
  
     @Test
     public void shouldOfferConvenienceMethodForCreatingMatcherWithNoFlags() {
-        assertEquals( "sourceforge.net", regex( "\\w+\\.\\w+" ).convert( "sourceforge.net" ) );
+        assertEquals( "sourceforge.net", new RegexMatcher( "\\w+\\.\\w+",0).convert( "sourceforge.net" ) );
     }
  
     @Test

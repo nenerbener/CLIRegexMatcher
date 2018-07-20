@@ -1,6 +1,6 @@
-package joptsimple.util;
+package com.nenerbener;
 
-import static joptsimple.util.CLIRegexMatcher.*;
+import joptsimple.util.RegexMatcher;
 import joptsimple.ValueConversionException;
 
 import org.junit.Before;
@@ -23,7 +23,7 @@ public class CLIRegexMatcher {
 		try {
 //			RegexMatcher rm = new RegexMatcher("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]",0);
 			RegexMatcher rm = new RegexMatcher(args[0],0);
-			System.out.println("url       : " + args[1]);
+			System.out.println("url: " + args[1]);
 			try {
 				String str = rm.convert(args[1]);
 				System.out.println("conversion: " + str);
